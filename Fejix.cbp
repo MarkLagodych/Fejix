@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Fejix" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option extended_obj_names="1" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Fejix" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Fejix" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="SDL2" />
+			<Add library="SDL2main" />
+			<Add library="SDL2_image" />
+			<Add library="SDL2_gfx" />
+		</Linker>
+		<Unit filename="src/backend.h" />
+		<Unit filename="src/backend_sdl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/backend_sdl.h" />
+		<Unit filename="src/color.h" />
+		<Unit filename="src/common.h" />
+		<Unit filename="src/def.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/flags.h" />
+		<Unit filename="src/log.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/log.h" />
+		<Unit filename="src/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/shape.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/visual.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/visual.h">
+			<Option target="Release" />
+		</Unit>
+		<Extensions>
+			<DoxyBlocks>
+				<comment_style block="0" line="2" />
+				<doxyfile_project output_directory="doc" />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general use_at_in_tags="1" />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

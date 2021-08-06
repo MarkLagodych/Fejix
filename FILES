@@ -1,0 +1,2 @@
+common.h -- common simple definitions like FJ_Color
+fejix.h -- all Fejix modules, needed to define a custom widget
