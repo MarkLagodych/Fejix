@@ -1,5 +1,5 @@
 # Concept of Fejix
-![img](logo/svg/fejix_logo-text-border.svg)
+![img](logo/png/fejix_logo-text-border.png)
 
 <sub>Don't look inside `src` folder for now. It's just temporary, old and bad.</sub>
 
