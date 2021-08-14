@@ -13,6 +13,9 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-pedantic" />
+					<Add option="-Wall" />
+					<Add option="-std=c++98" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
@@ -48,17 +51,16 @@
 		<Unit filename="src/def.h">
 			<Option target="Release" />
 		</Unit>
-		<Unit filename="src/flags.h" />
-		<Unit filename="src/log.c">
+		<Unit filename="src/elem.h" />
+		<Unit filename="src/error.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/log.h" />
+		<Unit filename="src/error.h" />
+		<Unit filename="src/fill.h" />
 		<Unit filename="src/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/shape.h">
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="src/shape.h" />
 		<Unit filename="src/visual.c">
 			<Option compilerVar="CC" />
 			<Option target="Release" />

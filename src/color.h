@@ -1,14 +1,16 @@
 #ifndef FJH_COLOR
 #define FJH_COLOR
 
-typedef unsigned char FJ_Channel;
+#include <stdint.h>
+
+typedef uint8_t FJ_Chan; // Single color channel
 
 typedef struct FJI_Color
 {
-    FJ_Channel r;
-    FJ_Channel g;
-    FJ_Channel b;
-    FJ_Channel a;
+    FJ_Chan r;
+    FJ_Chan g;
+    FJ_Chan b;
+    FJ_Chan a;
 } FJ_Color;
 
 #endif // FJH_COLOR
