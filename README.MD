@@ -3,7 +3,7 @@
 
 <sub>Don't look inside `src` folder for now. It's just temporary, old and bad.</sub>
 
-<sub>P.S. I would be grateful if somebody helped me with the logo. It should be orange-red orchid.</sub>
+<sub>P.S. I would be grateful if somebody helped me with the logo. It should be an orchid.</sub>
 
 # The ViLaSCo model
 
