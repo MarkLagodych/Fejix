@@ -1,0 +1,209 @@
+<!--
+    Logo for the Fejix project
+    Project link: https://github.com/MarkLagodych/Fejix
+    Description: orange orhid flower
+    Optional: border around the orchid, "Fejix" label on the right
+    Author: Mark Lagodych
+-->
+
+<svg
+    xmlns    = "http://www.w3.org/2000/svg"
+    viewBox  = "0 0 90 22"
+    width    = "240"
+    height   = "60"
+    
+    fill            = "url(#Gradient_Petal)"
+    stroke          = "#ec9100"
+    stroke-width    = "0.2"
+    stroke-linecap  = "round"
+    stroke-linejoin = "round">
+
+    <!-- Every tweakable color is below or above -->
+    <defs>
+        <radialGradient id = "Gradient_Petal">
+            <stop offset = "0%"   stop-color = "#dd070d"/>
+            <stop offset = "80%"  stop-color = "#e66800"/>
+            <stop offset = "100%" stop-color = "#ec9100"/>
+        </radialGradient>
+
+        <radialGradient id = "Gradient_Center">
+            <stop offset = "0%"   stop-color = "#fd57c9"/>
+            <stop offset = "100%" stop-color = "#d34778"/>
+        </radialGradient>
+
+        <linearGradient id = "Gradient_Text">
+            <stop offset = "0%"   stop-color = "#dd070d"/>
+            <stop offset = "100%" stop-color = "#e66800"/>
+        </linearGradient>
+
+        <style type="text/css">
+            <![CDATA[
+                #center-things {
+                    stroke: #a10204;
+                    fill:   #ac0102;
+                }
+
+                text {
+                    fill:   url(#Gradient_Text);
+                    stroke: #000;
+                }
+            ]]>
+        </style>
+    </defs>
+
+    <!-- DEBUG: top and bottom lines -->
+    <!--
+    <path stroke = "green" d = "M 0 0 H 100 M 0 21 H 100"/>
+    -->
+
+    <!-- Background petals: top-center, bottom-right, bottom-left -->
+    <path d = "
+        M 8 4
+        L 8 2
+        L 12 0
+        L 16 2
+        L 16 4
+
+        L 18 17
+        L 20 18
+        L 20 20
+        L 18 21
+        L 14 21
+        L 12 19
+
+        L 10 21
+        L 6 21
+        L 4 20
+        L 4 18
+        L 6 17
+
+        Z
+    "/>
+
+    <!-- Bottom small petal -->
+    <path d = "
+        M 8 17
+        L 10 19
+        L 14 19
+        L 16 17
+        L 12 16
+        Z
+    "/>
+
+
+    <!-- Big petals: left, right -->
+    <path d = "
+        M 12 16
+        L 10 14
+        L 10 6
+        L 8 4
+        L 4 4
+        L 0 8
+        L 0 12
+        L 2 16
+        L 4 17
+        L 8 17
+
+        L 12 16
+        L 14 14
+        L 14 6
+        L 16 4
+        L 20 4
+        L 24 8
+        L 24 12
+        L 22 16
+        L 20 17
+        L 16 17
+        Z
+    "/>
+
+    <!-- Center thing -->
+
+    <!-- Background -->
+    <path fill = "url(#Gradient_Center)" d = "
+        M 12 8
+        L 14 10
+        L 14 14
+        L 12 16
+        L 10 14
+        L 10 10
+        Z
+    "/>
+
+    <g id = "center-things">
+
+        <!-- Top-center -->
+        <path  d = "
+            M 12 8
+            L 13 11
+            L 11 11
+            Z
+        "/>
+
+        <!-- Bottom-left -->
+        <path d = "
+            M 12 16
+            L 10 14
+            L 10 13
+            L 11 13
+            Z
+        "/>
+
+        <!-- Bottom-right -->
+        <path d = "
+            M 12 16
+            L 13 13
+            L 14 13
+            L 14 14
+            Z
+        "/>
+
+    </g>
+
+    <!-- OPTIONAL: border around the orchid -->
+    <path
+        stroke = "black"
+        fill = "none"
+        d = "
+        M 12 0
+        L 16 2
+        L 16 4
+        L 20 4
+        L 24 8
+        L 24 12
+        L 22 16
+        L 20 17
+        L 18 17
+        L 20 18
+        L 20 20
+        L 18 21
+        L 14 21
+        L 12 19
+        L 10 21
+        L 6 21
+        L 4 20
+        L 4 18
+        L 6 17
+        L 4 17
+        L 2 16
+        L 0 12
+        L 0 8
+        L 4 4
+        L 8 4
+        L 8 2
+        Z
+    "/>
+
+    <!-- OPTIONAL: text on the right side -->
+    <text
+        x = "25"
+        y = "16"
+        font-size = "21"
+        font-family = "Courier"
+        font-weight = "bold">
+
+        Fejix
+
+    </text>
+
+</svg>
