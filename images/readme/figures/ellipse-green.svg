@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="4em" cy="1.5em" rx="4em" ry="1.5em" fill="green"/>
+    <text x="0" y="4em" fill="magenta">
+        Shape: ellipse
+    </text>
+    <text x="0" y="5em" fill="magenta">
+        Fill: solid color (green)
+    </text>
+</svg>

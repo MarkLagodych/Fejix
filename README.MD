@@ -20,38 +20,6 @@ Widget is defined as a set of four parameters:
 
 Visuals consist of _elems_ &ndash; the graphical primitives. Every elem has a _shape_ (form) and _fill_ (filling). Here are some examples of elems:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="10em" height="6em">
-    <rect
-        x ="0" y ="0" width="10em" height="3em" fill="yellow"/>
-    <text x="0" y="4em" fill="magenta">
-        Shape: rectange
-    </text>
-    <text x="0" y="5em" fill="magenta">
-        Fill: soild color (yellow)
-    </text>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="4em" cy="1.5em" rx="4em" ry="1.5em" fill="green"/>
-    <text x="0" y="4em" fill="magenta">
-        Shape: ellipse
-    </text>
-    <text x="0" y="5em" fill="magenta">
-        Fill: solid color (green)
-    </text>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <pattern id="p1" patternUnits="userSpaceOnUse" width="7em" height="7em" viewBox="0 0 200 200">
-            <image x="0" y="0" width="200" height="200" href="images/water.jpg"/>
-        </pattern>
-    </defs>
-    <rect x="0" y="0" width="7em" height="3em" fill="url(#p1)" rx="1em" ry="0.5em"/>
-    <text x="0" y="4em" fill="magenta">
-        Shape: rectangle (radius-x: 1em, radius-y: 0.5em)
-    </text>
-    <text x="0" y="5em" fill="magenta">
-        Fill: image (images&sol;water.jpg)
-    </text>
-</svg>
+![rect-yellow](images/readme/figures/rect-yellow.svg)
+![ellipse-green](images/readme/figures/ellipse-green.svg)
+![rrect-texture](images/readme/figures/rrect-texture.svg)

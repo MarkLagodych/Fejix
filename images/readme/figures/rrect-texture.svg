@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern id="p1" patternUnits="userSpaceOnUse" width="7em" height="7em" viewBox="0 0 200 200">
+            <image x="0" y="0" width="200" height="200" href="water.jpg"/>
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="7em" height="3em" fill="url(#p1)" rx="1em" ry="0.5em"/>
+    <text x="0" y="4em" fill="magenta">
+        Shape: rectangle (radius-x: 1em, radius-y: 0.5em)
+    </text>
+    <text x="0" y="5em" fill="magenta">
+        Fill: image (images&sol;water.jpg)
+    </text>
+</svg>
