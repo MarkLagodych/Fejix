@@ -4,8 +4,8 @@ Fejix style is `camelCase` for non-types, `PascalCase` for types and `SCREAMING_
 
 ## Normal identifiers
 ```
-FJ_fooBar -- function/variable/whatever
-FJ_FooBar -- struct/enum/typedef/class
+fj_fooBar -- function/variable/whatever
+fj_FooBar -- struct/enum/typedef/class
 ```
 
 ---------

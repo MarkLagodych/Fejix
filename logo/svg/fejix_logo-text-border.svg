@@ -1,10 +1,16 @@
 <!--
     Logo for the Fejix project
     Project link: https://github.com/MarkLagodych/Fejix
-    Description: orange orhid flower
+    Description: blue orhid flower
     Optional: border around the orchid, "Fejix" label on the right
     Author: Mark Lagodych
 -->
+
+<!--
+    NOTE: change svg size according to the content
+    With text:    viewBox 0 0 90 22, size 240 60
+    Without text: viewBox 0 0 24 22, size 64  64
+ -->
 
 <svg
     xmlns    = "http://www.w3.org/2000/svg"
@@ -13,17 +19,18 @@
     height   = "60"
     
     fill            = "url(#Gradient_Petal)"
-    stroke          = "#ec9100"
+    stroke          = "#136eff"
     stroke-width    = "0.2"
     stroke-linecap  = "round"
     stroke-linejoin = "round">
 
     <!-- Every tweakable color is below or above -->
     <defs>
+        <!-- OLD: dd070d e66800 ec9100 CHANGED: all colors inverted -->
         <radialGradient id = "Gradient_Petal">
-            <stop offset = "0%"   stop-color = "#dd070d"/>
-            <stop offset = "80%"  stop-color = "#e66800"/>
-            <stop offset = "100%" stop-color = "#ec9100"/>
+            <stop offset = "0%"   stop-color = "#22f8f2"/>
+            <stop offset = "80%"  stop-color = "#1997ff"/>
+            <stop offset = "100%" stop-color = "#136eff"/>
         </radialGradient>
 
         <radialGradient id = "Gradient_Center">
@@ -32,8 +39,8 @@
         </radialGradient>
 
         <linearGradient id = "Gradient_Text">
-            <stop offset = "0%"   stop-color = "#dd070d"/>
-            <stop offset = "100%" stop-color = "#e66800"/>
+            <stop offset = "0%"   stop-color = "#136eff"/>
+            <stop offset = "100%" stop-color = "#22f8f2"/>
         </linearGradient>
 
         <style type="text/css">
