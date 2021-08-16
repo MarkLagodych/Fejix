@@ -20,7 +20,7 @@ Widget is defined as a set of four parameters:
 
 Visuals consist of _elems_ &ndash; the graphical primitives. Every elem has a _shape_ (form) and _fill_ (filling). Here are some examples of elems:
 
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="10em" height="6em">
     <rect
         x ="0" y ="0" width="10em" height="3em" fill="yellow"/>
     <text x="0" y="4em" fill="magenta">
