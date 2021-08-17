@@ -1,8 +1,6 @@
 # Concept of Fejix
 ![img](images/logo/png/fejix_logo-text-border.png)
 
-<sub>Don't look inside `src` folder for now. It's just temporary, old and bad.</sub>
-
 <sub>P.S. I would be grateful if somebody helped me with the logo - I don't draw very well. Currently it's an orchid.</sub>
 
 # The ViLaSCo model
@@ -22,4 +20,5 @@ Visuals consist of _elems_ &ndash; the graphical primitives. Every elem has a _s
 
 ![rect-yellow](images/readme/figures/rect-yellow.svg)
 ![ellipse-green](images/readme/figures/ellipse-green.svg)
-![rrect-texture](images/readme/figures/rrect-texture.svg)
+![rrect-gradient](images/readme/figures/rrect-gradient.svg)
+![nrect-gradient](images/readme/figures/nrect-gradient.svg)

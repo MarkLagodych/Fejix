@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="g1" gradientTransform="rotate(45)">
+            <stop offset="0%" stop-color="red"/>
+            <stop offset="100%" stop-color="cyan"/>
+        </linearGradient>>
+    </defs>
+    <rect x="0" y="0" width="7em" height="3em" fill="rgba(0,0,0,0)" stroke="url(#g1)" stroke-width="3" rx="1em" ry="0.5em"/>
+    <text x="0" y="4em" fill="magenta">
+        Shape: rounded rectangle outline
+    </text>
+    <text x="0" y="5em" fill="magenta">
+        Fill: gradient (red, blue)
+    </text>
+</svg>

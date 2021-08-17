@@ -2,7 +2,7 @@
     <rect
         x ="0" y ="0" width="10em" height="3em" fill="yellow"/>
     <text x="0" y="4em" fill="magenta">
-        Shape: rectange
+        Shape: filled rectange
     </text>
     <text x="0" y="5em" fill="magenta">
         Fill: soild color (yellow)
