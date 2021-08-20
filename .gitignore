@@ -1,5 +1,13 @@
 bin
 obj
+build
 doc
+
+# Code::Blocks files
+Fejix.cbp
 Fejix.layout
 Fejix.depend
+
+.l
+.directory
+.old
