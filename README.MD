@@ -40,6 +40,8 @@ Each elem has a positioning hint relative to the [area](#area) represented by an
 
 ## Appendix: primitive definitions
 
+The `int` is assumed to be at least 16 bits.
+
 ### Rect
 A real rectangle with all dimensions specified in pixels
 ```c
@@ -55,12 +57,15 @@ typedef struct {
 A rectangle with relative units support (percents%)
 ```c
 typedef struct {
-    float x;
-    float y;
-    float w;
-    float h;
+    int x;
+    int y;
+    int w;
+    int h;
 
-    // Are dimensions specified in pixels (0) or percents (1) ?
+    // Are dimensions specified in pixels (0) or percents% (1) ?
+    // For percents%, the calculation is (float) dim / 100 * layout.area.dim
+    // Example: if w is 9915 then real width is (float) w / 100 * layout.area.w
+    // So the result is 99.15 * layout.area.w
     unsigned x_pc: 1;
     unsigned y_pc: 1;
     unsigned w_pc: 1;
