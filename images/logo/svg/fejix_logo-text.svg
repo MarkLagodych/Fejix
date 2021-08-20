@@ -2,7 +2,7 @@
     Logo for the Fejix project
     Project link: https://github.com/MarkLagodych/Fejix
     Description: blue orhid flower
-    Optional: border around the orchid, "Fejix" label on the right
+    Optional: "Fejix" label on the right
     Author: Mark Lagodych
 -->
 
@@ -19,40 +19,36 @@
     height   = "60"
     
     fill            = "url(#Gradient_Petal)"
-    stroke          = "#136eff"
+    stroke          = "black"
     stroke-width    = "0.2"
     stroke-linecap  = "round"
     stroke-linejoin = "round">
 
-    <!-- Every tweakable color is below or above -->
+    <!-- Every tweakable color is below -->
     <defs>
-        <!-- OLD: dd070d e66800 ec9100 CHANGED: all colors inverted -->
         <radialGradient id = "Gradient_Petal">
-            <stop offset = "0%"   stop-color = "#22f8f2"/>
-            <stop offset = "80%"  stop-color = "#1997ff"/>
-            <stop offset = "100%" stop-color = "#136eff"/>
+            <stop offset = "0%"   stop-color = "#00eeff"/>
+            <stop offset = "70%"  stop-color = "#12c5d1"/>
+            <stop offset = "100%" stop-color = "#2d95ae"/>
         </radialGradient>
 
-        <radialGradient id = "Gradient_Center">
-            <stop offset = "0%"   stop-color = "#fd57c9"/>
-            <stop offset = "100%" stop-color = "#d34778"/>
-        </radialGradient>
+        <linearGradient id = "Gradient_Center">
+            <stop offset = "100%" stop-color = "#e4000b"/>
+        </linearGradient>
 
         <linearGradient id = "Gradient_Text">
-            <stop offset = "0%"   stop-color = "#136eff"/>
-            <stop offset = "100%" stop-color = "#22f8f2"/>
+            <stop offset = "0%"   stop-color = "#2d95ae"/>
+            <stop offset = "100%" stop-color = "#00eeff"/>
         </linearGradient>
 
         <style type="text/css">
             <![CDATA[
                 #center-things {
-                    stroke: #a10204;
-                    fill:   #ac0102;
+                    fill: #e7ff00;
                 }
 
                 text {
                     fill:   url(#Gradient_Text);
-                    stroke: #000;
                 }
             ]]>
         </style>

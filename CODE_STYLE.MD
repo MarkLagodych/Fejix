@@ -1,11 +1,10 @@
 # FEJIX CODE STYLE RULES:
-Fejix style is `camelCase` for non-types, `PascalCase` for types and `SCREAMING_SNAKE_CASE` for macros.
+Fejix style is `camelCase` for normal identifiers and `SCREAMING_SNAKE_CASE` for macros.
 
 
 ## Normal identifiers
 ```
-fj_fooBar -- function/variable/whatever
-fj_FooBar -- struct/enum/typedef/class
+fj_fooBar
 ```
 
 ---------
