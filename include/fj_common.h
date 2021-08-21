@@ -21,25 +21,21 @@ typedef struct {
     int h;
 } fj_rect;
 
-/// Rectangle with pixel/percent dimensions
 typedef struct {
     int x;
     int y;
     int w;
     int h;
-} fj_urect;
 
-typedef struct {
-    fj_rect area;
-} fj_layout;
+    // px (0), % (1) or em (2)
+    unsigned x_unit: 2;
+    unsigned y_unit: 2;
+    unsigned w_unit: 2;
+    unsigned h_unit: 2;
 
-typedef struct {
-    enum {
-        FJ_SHAPE_LINE,
-        FJ_SHAPE_RECT,
-    } shape_type;
-
-    float 
-} fj_shape;
+    unsigned anchor_x: 1; // 0 is left, 1 is right
+    unsigned anchor_y: 1; // 0 is top, 1 is bottom
+    unsigned _unused_: 6; 
+} xrect;
 
 #endif // _FJ_COMMON_H

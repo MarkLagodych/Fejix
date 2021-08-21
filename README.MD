@@ -7,6 +7,7 @@ __TABLE OF CONTENTS__
     - [Layout](#layout)
       - [Area](#area)
   - [Appendix: primitive definitions](#appendix-primitive-definitions)
+    - [Units](#units)
     - [Rect](#rect)
     - [XRect](#xrect)
 
@@ -20,7 +21,7 @@ Widget is defined as a set of four parameters:
 * __Layout__ &mdash; a set of rules that describe how the widget should be placed on a graphical display related to other widgets;
 * __Script__ &mdash; program code that is to be executed if the user interacts with the widget (includes changes to the widget visuals and invokation of the program functionality controlled by the widget);
 * __Content__ &mdash; a list of _children_ widgets tied to the _parent_ widget in order to be controlled and/or visually grouped;
-  * __Static content__ &mdash; a fixed set of widgets needed to display the parent widget. It must be never changed (i.e. no widgets should be added or removed from the static content during the run time).
+  * __Static content__ &mdash; a fixed set of widgets needed to display the parent widget. It must be never changed (i.e. no widgets can be added or removed from the static content during the run time).
 
 
 ### Visuals &ndash; Elems
@@ -29,6 +30,7 @@ Visuals consist of _elems_ &ndash; the graphical primitives. Every elem has a _s
 
 ![rect-yellow](images/readme/figures/rect-yellow.svg)
 ![ellipse-green](images/readme/figures/ellipse-green.svg)
+
 ![rrect-gradient](images/readme/figures/rrect-gradient.svg)
 ![nrect-gradient](images/readme/figures/nrect-gradient.svg)
 
@@ -36,11 +38,25 @@ Each elem has a positioning hint relative to the [area](#area) represented by an
 
 ### Layout
 
+One of the primary purposes of layout is to compute [area](#area) to make it possible to draw the [visuals](#visuals--elems).
+
+Now, the definition of layout ends. 
+
 #### Area
+
+This is a rectangle of a widget where all visuals are drawn (though some elems like borders can be drawn even outside the area).
 
 ## Appendix: primitive definitions
 
 The `int` is assumed to be at least 16 bits.
+
+### Units
+
+Unit      | Short | Considered status
+--------- | ----- | -----------------
+Pixel     | `px`  | Absolute
+Percent   | `%`   | Relative
+Font size | `em`  | Relative
 
 ### Rect
 A real rectangle with all dimensions specified in pixels
@@ -54,7 +70,17 @@ typedef struct {
 ```
 
 ### XRect
-A rectangle with relative units support (percents%)
+An eXtended rectangle with relative units support (%, em)
+
+If units are relative, than dimensions are divided by 100 to form a floating-point value
+
+Example:
+```c
+w = 9915
+w_unit = %
+```
+`w` is computed as `99.15%`
+
 ```c
 typedef struct {
     int x;
@@ -62,19 +88,14 @@ typedef struct {
     int w;
     int h;
 
-    // Are dimensions specified in pixels (0) or percents% (1) ?
-    // For percents%, the calculation is (float) dim / 100 * layout.area.dim
-    // Example: if w is 9915 then real width is (float) w / 100 * layout.area.w
-    // So the result is 99.15 * layout.area.w
-    unsigned x_pc: 1;
-    unsigned y_pc: 1;
-    unsigned w_pc: 1;
-    unsigned h_pc: 1;
+    // px (0), % (1) or em (2)
+    unsigned x_unit: 2;
+    unsigned y_unit: 2;
+    unsigned w_unit: 2;
+    unsigned h_unit: 2;
 
-    // To what sides the shape is sticky to? (0 - not sticky, 1 - sticky)
-    unsigned anchor_top:    1;
-    unsigned anchor_right:  1;
-    unsigned anchor_bottom: 1;
-    unsigned anchor_left:   1;
+    unsigned anchor_x: 1; // 0 is left, 1 is right
+    unsigned anchor_y: 1; // 0 is top, 1 is bottom
+    unsigned _unused_: 6; 
 } xrect;
 ```
