@@ -1,9 +1,7 @@
 # Concept of Fejix
 Here are theoretical fundamentals of what is Fejix. 
 
-__REFERENCES__
-
-[Implementation README](IMPL_README.MD) 
+[Go to implementation README](IMPL_README.MD) 
 
 __TABLE OF CONTENTS__
 - [Concept of Fejix](#concept-of-fejix)
