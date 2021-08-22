@@ -3,6 +3,12 @@
 
 #include "fj_common.h"
 
+#if defined(FJ_OPT_BACKEND_SDL)
+#   include "backends/sdl2/fj_backend.h"
+#else
+#   error Fejix backend is not specified
+#endif
+
 int fj_init();
 void fj_quit();
 

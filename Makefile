@@ -5,11 +5,13 @@ OPT = -Wall -pedantic --std=c98
 bin/test: obj/backend_sdl.o obj/fejix.o obj/test.o
 	gcc $^ -o $@ $(LIBS)
 
-obj/test.o:
-	gcc -c src/test.c -o $@ $(INC) $(LIBS)
+C = gcc -c $< -o $@ $(INC) $(LIBS)
 
-obj/fejix.o:
-	gcc -c src/fejix.c -o $@ $(INC) $(LIBS)
+obj/test.o: src/test.c
+	$C
 
-obj/backend_sdl.o:
-	gcc -c src/backends/sdl2/fj_backend.c -o $@ $(INC) $(LIBS)
+obj/fejix.o: src/fejix.c
+	$C
+
+obj/backend_sdl.o: src/backends/sdl2/fj_backend.c
+	$C

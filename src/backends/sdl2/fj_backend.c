@@ -4,10 +4,14 @@
 
 int fj_init_backend()
 {
-    return SDL_Init(SDL_INIT_EVERYTHING) < 0;
+    if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
+        return 1;
+
+    return 0;
 }
 
 void fj_quit_backend()
 {
+    SDL_DestroyWindow(window);
     SDL_Quit();
 }

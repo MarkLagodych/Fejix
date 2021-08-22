@@ -27,15 +27,18 @@ typedef struct {
     int w;
     int h;
 
-    // px (0), % (1) or em (2)
-    unsigned x_unit: 2;
-    unsigned y_unit: 2;
-    unsigned w_unit: 2;
-    unsigned h_unit: 2;
+    // Units: px (0), % (1) or em (2)
+    unsigned ux: 2;
+    unsigned uy: 2;
+    unsigned uw: 2;
+    unsigned uh: 2;
 
-    unsigned anchor_x: 1; // 0 is left, 1 is right
-    unsigned anchor_y: 1; // 0 is top, 1 is bottom
-    unsigned _unused_: 6; 
-} xrect;
+    // Anchors
+    unsigned ax: 1; // 0 is left, 1 is right
+    unsigned ay: 1; // 0 is top, 1 is bottom
+    unsigned aw: 1; // 0 is w, 1 is area.w - w
+    unsigned ah: 1; // 0 is h, 1 is area.h - h
+    unsigned _unused: 4; 
+} fj_xrect;
 
 #endif // _FJ_COMMON_H
