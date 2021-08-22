@@ -2,7 +2,7 @@
 
 [BACK (implementation README)](IMPL_README.MD)
 
-[NEXT (compilation options)](COMPILE_OPTIONS.MD)
+[NEXT (compilation options)](CPL_OPTIONS.MD)
 
 Fejix style is `camelCase` for normal identifiers and `SCREAMING_SNAKE_CASE` for macros.
 
