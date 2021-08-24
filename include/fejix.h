@@ -3,6 +3,8 @@
 
 #include "fj_common.h"
 
+#define FJ_OPT_BACKEND_SDL
+
 #if defined(FJ_OPT_BACKEND_SDL)
 #   include "backends/sdl2/fj_backend.h"
 #else

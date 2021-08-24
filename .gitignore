@@ -3,11 +3,6 @@ obj
 build
 doc
 
-# Code::Blocks files
-Fejix.cbp
-Fejix.layout
-Fejix.depend
-
-.l
-.directory
-.old
+# ALL hidden files/directories but NOT .gitgnore itself
+.*
+!/.gitignore

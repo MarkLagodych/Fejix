@@ -1,0 +1,17 @@
+add_requires("libsdl")
+add_requires("libsdl_image")
+add_requires("libsdl_gfx")
+
+target("fejix")
+    set_kind("static")
+    add_files("src/*.c")
+    add_files("src/backends/sdl2/*.c")
+    add_includedirs("include/backends/sdl2/")
+    add_includedirs("include")
+    add_packages("libsdl")
+
+target("fejix_test")
+    set_kind("binary")
+    add_files("src/test.c")
+    add_includedirs("include")
+    add_deps("fejix")

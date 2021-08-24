@@ -12,6 +12,5 @@ int fj_init_backend()
 
 void fj_quit_backend()
 {
-    SDL_DestroyWindow(window);
     SDL_Quit();
 }
