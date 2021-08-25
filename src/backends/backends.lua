@@ -2,7 +2,7 @@ backend_packages   = {}             -- Packages to require
 backend_dirname    = "."            -- The directory in src/backends and include/backends
 backend_additional = function() end -- Additional steps to perform
 
-option("fejix_backend_option")
+option("backend")
     set_showmenu(true)
     set_description("Fejix backend")
 

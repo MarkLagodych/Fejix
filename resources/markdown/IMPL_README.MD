@@ -10,7 +10,7 @@ Fejix uses [Xmake](https://xmake.io) build system.
 
 1.  Install Xmake using one of the following commands:
 
-    In bash:
+    in bash:
     ```bash
     bash <(curl -fsSL https://xmake.io/shget.text)
     ```
@@ -19,12 +19,26 @@ Fejix uses [Xmake](https://xmake.io) build system.
     bash <(wget https://xmake.io/shget.text -O -)
     ```
 
-    In powershell:
+    in powershell:
     ```powershell
     Invoke-Expression (Invoke-Webrequest 'https://xmake.io/psget.text' -UseBasicParsing).Content
     ```
 
-2.  Build Fejix:
+2. Configure Fejix:
+    
+    via Xmake GUI configuration tool
+
+    ```bash
+    xmake config --menu
+    ```
+
+    via command line (see also [build options](#build-options)):
+
+    ```bash
+    xmake config --option1=value1 --option2=value2 ...
+    ```
+
+3.  Build Fejix:
     ```bash
     xmake build fejix
     ```
@@ -32,3 +46,9 @@ Fejix uses [Xmake](https://xmake.io) build system.
 ## Description
 
 Yet almost nothing has been done... :roll_eyes: But it is coming soon! :smiley:
+
+## Build options
+
+Option | Meaning | Possible values | Default value
+------ | ------- | --------------- | -------------
+backend | The drawing library | SDL2/gfx | SDL2/gfx
