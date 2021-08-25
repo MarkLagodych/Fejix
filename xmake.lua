@@ -2,7 +2,7 @@ set_xmakever("2.5.0")
 set_project("Fejix")
 set_version("0.0.0")
 
-includes("src/backends/backends.lua")
+includes("include/backends/backends.lua")
 
 add_backend_requires()
 
