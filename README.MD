@@ -46,11 +46,11 @@ One of the primary purposes of layout is to compute [area](#area) to make it pos
 
 #### Strategies
 
-There are several strategies 
+There are several strategies of computing layout:
 
-__Relative layout__: [xrect](#xrect) relative to the parent.
+- __Relative layout__: [xrect](#xrect) relative to the parent.
 
-__Flow layout__: not yet implemented, but it must work similarly to HTML element flow or Tkinter's `pack` method.
+- __Flow layout__: not yet implemented, but it must work similarly to HTML element flow or Tkinter's `pack` method.
 
 
 #### Area
