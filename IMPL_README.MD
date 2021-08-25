@@ -8,23 +8,26 @@ See notes about [code style](CODE_STYLE.MD) and [compilation options](CPL_OPTION
 
 Fejix uses [Xmake](https://xmake.io) build system.
 
-1. Install Xmake, using one of the following commands:
-```bash
-bash <(curl -fsSL https://xmake.io/shget.text)
-```
+1.  Install Xmake using one of the following commands:
 
-```bash
-bash <(wget https://xmake.io/shget.text -O -)
-```
+    In bash:
+    ```bash
+    bash <(curl -fsSL https://xmake.io/shget.text)
+    ```
 
-```powershell
-Invoke-Expression (Invoke-Webrequest 'https://xmake.io/psget.text' -UseBasicParsing).Content
-```
+    ```bash
+    bash <(wget https://xmake.io/shget.text -O -)
+    ```
 
-2. Build Fejix:
-```bash
-xmake build fejix
-```
+    In powershell:
+    ```powershell
+    Invoke-Expression (Invoke-Webrequest 'https://xmake.io/psget.text' -UseBasicParsing).Content
+    ```
+
+2.  Build Fejix:
+    ```bash
+    xmake build fejix
+    ```
 
 ## Description
 
