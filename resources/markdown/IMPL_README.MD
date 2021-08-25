@@ -1,6 +1,6 @@
 # Fejix implementation
 
-[BACK (concept README)](README.MD)
+[BACK (concept README)](../../README.MD)
 
 See notes about [code style](CODE_STYLE.MD) and [compilation options](CPL_OPTIONS.MD)
 

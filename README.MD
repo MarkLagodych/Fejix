@@ -1,7 +1,7 @@
 # Concept of Fejix
 Here are theoretical fundamentals of what is Fejix. 
 
-[Go to implementation README](IMPL_README.MD) 
+[Go to implementation README](resources/markdown/IMPL_README.MD) 
 
 __TABLE OF CONTENTS__
 - [Concept of Fejix](#concept-of-fejix)
@@ -32,11 +32,11 @@ Widget is defined as a set of four parameters:
 
 Visuals consist of _elems_ &ndash; the graphical primitives. Every elem has a _shape_ (form) and _fill_ (filling). Here are some examples of elems:
 
-![rect-yellow](images/readme/figures/rect-yellow.svg)
-![ellipse-green](images/readme/figures/ellipse-green.svg)
+![rect-yellow](resources/images/readme/figures/rect-yellow.svg)
+![ellipse-green](resources/images/readme/figures/ellipse-green.svg)
 
-![rrect-gradient](images/readme/figures/rrect-gradient.svg)
-![nrect-gradient](images/readme/figures/nrect-gradient.svg)
+![rrect-gradient](resources/images/readme/figures/rrect-gradient.svg)
+![nrect-gradient](resources/images/readme/figures/nrect-gradient.svg)
 
 Each elem has a positioning hint relative to the [area](#area) represented by an [xrect](#xrect).
 
