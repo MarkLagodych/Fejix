@@ -1,14 +1,18 @@
-add_requires("libsdl")
-add_requires("libsdl_image")
-add_requires("libsdl_gfx")
+set_xmakever("2.5.0")
+set_project("Fejix")
+set_version("0.0.0")
+
+includes("src/backends/backends.lua")
+
+add_backend_requires()
 
 target("fejix")
     set_kind("static")
+
     add_files("src/*.c")
-    add_files("src/backends/sdl2/*.c")
-    add_includedirs("include/backends/sdl2/")
     add_includedirs("include")
-    add_packages("libsdl")
+    
+    add_backend()
 
 target("fejix_test")
     set_kind("binary")
