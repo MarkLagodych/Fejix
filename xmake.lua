@@ -21,6 +21,5 @@ target "fejix_test"
     set_kind "binary"
 
     add_files "src/test.c"
-    add_includedirs "include"
-
-    add_deps "fejix"
+    
+    add_fejix()

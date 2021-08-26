@@ -41,4 +41,15 @@ typedef struct {
     unsigned _unused: 4; 
 } fj_xrect;
 
+enum fj_fillType
+{
+    FJ_FILL_NONE,
+    FJ_FILL_COLOR,
+};
+
+typedef struct {
+    enum fj_fillType type;
+    void *data;
+} fj_fill;
+
 #endif // _FJ_COMMON_H

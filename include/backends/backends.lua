@@ -50,3 +50,10 @@ function add_backend()
 
     add_packages(backend_packages)
 end
+
+-- Call in any target that uses Fejix
+function add_fejix()
+    add_includedirs("include")
+    add_includedirs("include/backends/"..backend_dirname)
+    add_deps("fejix")
+end

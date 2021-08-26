@@ -10,7 +10,7 @@ int main(int argc, char* args[])
 
     fj_window *win = fj_newWindow("Hello world!", 0, 0, 800, 600, FJ_WM_POS_ANYWHERE, 0);
 
-    usleep(2e6);
+    fj_loop();
 
     fj_delWindow(win);
 
