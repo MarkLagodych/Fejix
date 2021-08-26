@@ -2,13 +2,12 @@
 #define _FJ_BACKEND_H
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL2_gfxPrimitives.h>
 
-typedef struct {
-    const char *title;
-    SDL_Window *_win;
-} fj_window;
+#include "fj_wm.h"
 
-int fj_init_backend();
-void fj_quit_backend();
+int fj_initBackend();
+void fj_quitBackend();
 
 #endif // _FJ_BACKEND_H

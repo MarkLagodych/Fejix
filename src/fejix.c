@@ -4,10 +4,10 @@
 
 int fj_init()
 {
-    return fj_init_backend();
+    return fj_initBackend();
 }
 
 void fj_quit()
 {
-    fj_quit_backend();
+    fj_quitBackend();
 }

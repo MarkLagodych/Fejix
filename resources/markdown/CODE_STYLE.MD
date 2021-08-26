@@ -6,7 +6,6 @@
 
 Fejix style is `camelCase` for normal identifiers and `SCREAMING_SNAKE_CASE` for macros.
 
-
 ## Normal identifiers
 ```
 fj_fooBar
@@ -36,3 +35,42 @@ FJ_OPT_FOO_BAR
 ```
 
 ---------
+
+All abbreviations must follow the style of normal words.
+```
+readHtmlDocumentation
+useXmlConfiguration
+processPhpScripts
+guiFallbackTtfFont
+```
+
+---------
+
+"namespaces" (prefixes like `fj_`, `wm_`) must be written in snake case. Thus:
+```
+fj_wm_closeAllWindowsAndShowBsod();
+```
+
+
+
+---------
+
+## Braces
+
+Braces should appear on their own lines, but for short expressions it can vary.
+```c
+void foo(bar_t bar, baz_t baz, int flags, ...)
+{
+    // ...
+}
+
+/** BUT **/
+
+if (i > 3) {
+    // ...
+}
+```
+
+## Typedefs
+
+Structures should be declared with a `typedef`, but enumerations not.
