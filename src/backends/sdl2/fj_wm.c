@@ -5,11 +5,13 @@ fj_window* fj_wm_queryNewWindow()
     fj_window *win = (fj_window *) malloc(sizeof(fj_window));
     if (!win) return NULL;
 
-    win->handle = SDL_CreateWindow(
+    win->_handle = SDL_CreateWindow(
         "",
         SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
         300, 250, 0
     );
+
+    win->_renderer = SDL_CreateRenderer(win->_handle, -1, 0);
 
     win->title = "";
 
@@ -20,7 +22,8 @@ fj_window* fj_wm_queryNewWindow()
 
 void fj_wm_queryDelWindow(fj_window *win)
 {
-    SDL_DestroyWindow(win->handle);
+    SDL_DestroyRenderer(win->_renderer);
+    SDL_DestroyWindow(win->_handle);
     free(win);
 }
 
@@ -66,7 +69,8 @@ fj_window* fj_newWindow (
     fj_window *win = (fj_window *) malloc(sizeof(fj_window));
     if (!win) return NULL;
 
-    win->handle = SDL_CreateWindow(title, _x, _y, w, h, _flags);
+    win->_handle = SDL_CreateWindow(title, _x, _y, w, h, _flags);
+    win->_renderer = SDL_CreateRenderer(win->_handle, -1, 0);
     win->title = title;
 
     return win;
@@ -81,7 +85,7 @@ void _queryWinTitle(fj_window *win, int set, const char *strData)
     }
 
     win->title = strData;
-    SDL_SetWindowTitle(win->handle, strData);
+    SDL_SetWindowTitle(win->_handle, strData);
 }
 
 static
@@ -95,25 +99,25 @@ static
 void _queryWinPos(fj_window *win, int set, int *x, int *y)
 {
     if (!set)
-        SDL_GetWindowPosition(win->handle, x, y);
+        SDL_GetWindowPosition(win->_handle, x, y);
     else
-        SDL_SetWindowPosition(win->handle, *x, *y);
+        SDL_SetWindowPosition(win->_handle, *x, *y);
 }
 
 static
 void _queryWinSize(fj_window *win, int set, int *w, int *h)
 {
     if (!set)
-        SDL_GetWindowSize(win->handle, w, h);
+        SDL_GetWindowSize(win->_handle, w, h);
     else
-        SDL_SetWindowSize(win->handle, *w, *h);
+        SDL_SetWindowSize(win->_handle, *w, *h);
 }
 
 static
 void _queryWinFlag(fj_window *win, int set, int flag, int *value)
 {
     if (!set) {
-        int current = SDL_GetWindowFlags(win->handle);
+        int current = SDL_GetWindowFlags(win->_handle);
 
         switch (flag) {
         case FJ_WM_FLAG_BORDERLESS:
@@ -142,7 +146,7 @@ void _queryWinFlag(fj_window *win, int set, int flag, int *value)
     } // !set
 
 #   define v *value
-#   define h win->handle
+#   define h win->_handle
 
     switch (flag) {
     case FJ_WM_FLAG_BORDERLESS:
@@ -171,7 +175,8 @@ void _queryWinFlag(fj_window *win, int set, int flag, int *value)
         return;
     }
 
-#   undef v h
+#   undef v
+#   undef h
 
 }
 

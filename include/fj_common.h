@@ -46,15 +46,40 @@ typedef struct {
     unsigned _unused: 4; 
 } fj_xrect;
 
+typedef struct {
+    int r; // Corner radius
+    int t; // Line thickness (-1 if the shape is filled)
+} fj_simpleShape; /// Additional fields for simple shapes
+
 enum fj_fillType
 {
     FJ_FILL_NONE,
     FJ_FILL_COLOR,
 };
 
+enum fj_shapeType {
+    FJ_SHAPE_LINE,
+    FJ_SHAPE_RECT,
+    FJ_SHAPE_ELLIPSE,
+};
+
 typedef struct {
-    enum fj_fillType type;
-    void *data;
-} fj_fill;
+    union {
+        fj_color color;
+        void *data;
+    } fill;
+
+    fj_xrect shapeArea;
+
+    union {
+        fj_simpleShape simple;
+        void *data;
+    } shape;
+
+    enum fj_fillType fillType;
+
+    enum fj_shapeType shapeType;
+
+} fj_elem;
 
 #endif // _FJ_COMMON_H

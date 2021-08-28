@@ -2,15 +2,18 @@
  * Some things to do with the window manager
  */
 
-#ifndef _FJ_WINDOW_H
-#define _FJ_WINDOW_H
+#ifndef _FJ_WM_H
+#define _FJ_WM_H
 
-#include "fj_backend.h"
+#include <SDL2/SDL.h>
+
 #include "fj_common.h"
 
 typedef struct {
     const char *title;
-    SDL_Window *handle;
+
+    SDL_Window *_handle;
+    SDL_Renderer *_renderer;
 } fj_window;
 
 enum fj_wm_position
@@ -71,4 +74,4 @@ void fj_wm_queryStr (
 
 
 
-#endif // _FJ_WINDOW_H
+#endif // _FJ_WM_H
