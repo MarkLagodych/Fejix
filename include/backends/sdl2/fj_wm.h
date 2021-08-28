@@ -20,30 +20,55 @@ enum fj_wm_position
     FJ_WM_POS_CENTER,   /// Center on the screen
 };
 
-typedef SDL_WindowFlags fj_wm_flags;
-#define FJ_WM_FLAG_BORDERLESS SDL_WINDOW_BORDERLESS
-#define FJ_WM_FLAG_FULLSCREEN SDL_WINDOW_FULLSCREEN
-#define FJ_WM_FLAG_RESIZABLE  SDL_WINDOW_RESIZABLE
-#define FJ_WM_FLAG_MAXIMIZED  SDL_WINDOW_MAXIMIZED
-#define FJ_WM_FLAG_MINIMIZED  SDL_WINDOW_MINIMIZED
+enum fj_wm_windowFlags {
+    FJ_WM_FLAG_BORDERLESS = 1 << 0,
+    FJ_WM_FLAG_FULLSCREEN = 1 << 1,
+    FJ_WM_FLAG_RESIZABLE  = 1 << 2,
+    FJ_WM_FLAG_MAXIMIZED  = 1 << 3,
+    FJ_WM_FLAG_MINIMIZED  = 1 << 4,
+};
 
-#define FJ_WM_FLAG_NORMAL     0
+enum fj_wm_queryType {
+    FJ_WM_QUERY_CURSOR_POS,
+    FJ_WM_QUERY_WINDOW_POS,
+    FJ_WM_QUERY_WINDOW_SIZE,
+    FJ_WM_QUERY_WINDOW_TITLE,
+    FJ_WM_QUERY_WINDOW_FLAG,
+};
+
+fj_window* fj_wm_queryNewWindow();
+void fj_wm_queryDelWindow(fj_window*);
 
 fj_window* fj_newWindow (
     const char *title,
     int x, int y, int w, int h,
     enum fj_wm_position position,
-    fj_wm_flags flags
+    int flags
+);
+#define fj_delWindow fj_wm_queryDelWindow
+
+/**
+ * @param set   Get (0) or set(1) the queried parameter
+ * 
+ * @example examples/window_manipulation/wm_queries.c
+ */
+void fj_wm_queryInt2 (
+    fj_window *win,
+    int set, enum fj_wm_queryType type,
+    int *intData1, int *intData2
 );
 
-void fj_delWindow(fj_window *window);
+/**
+ * @param set   Get (0) or set(1) the queried parameter
+ * 
+ * @example examples/window_manipulation/wm_queries.c
+ */
+void fj_wm_queryStr (
+    fj_window *win,
+    int set, enum fj_wm_queryType type,
+    const char *strData
+);
 
-/// @param set  if 0 then just gets the value, if 1 then sets the value
-void fj_wm_queryTitle(int set, fj_window*, const char* title);
 
-void fj_wm_queryRect(int set, fj_window*, fj_rect* rect);
-
-/// Each flag is applied only if it is different
-void fj_wm_queryFlags(int set, fj_window*, fj_wm_flags* flags);
 
 #endif // _FJ_WINDOW_H

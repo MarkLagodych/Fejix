@@ -14,6 +14,6 @@ typedef void (*fj_eventHandlerFunc) ();
 typedef void (*fj_updaterFunc) ();
 void fj_runBackend(fj_eventHandlerFunc, fj_updaterFunc);
 
-void fj_drawLine(fj_xrect*, fj_fill*);
+//void fj_drawLine(fj_xrect*, fj_fill*);
 
 #endif // _FJ_BACKEND_H

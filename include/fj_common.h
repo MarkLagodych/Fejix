@@ -13,6 +13,11 @@ typedef struct {
     fj_chan a;
 } fj_color;
 
+typedef struct {
+    int x;
+    int y;
+} fj_point;
+
 /// Rectangle with real (pixel) dimensions
 typedef struct {
     int x;
